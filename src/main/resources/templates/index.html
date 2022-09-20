@@ -3,12 +3,16 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Aprende Spring</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
 </head>
 
 <body>
 <h1>Utilizo thymeleaf para pasar datos del controlador a la vista, utilizo xmlns:th en etiqueta html</h1>
-<h1>RequestMapping para modificar ruta de primer nivel y segundo nivel. Muy utilizado en rutas con CRUD</h1>
+<h1 class="color-rojo">RequestMapping para modificar ruta de primer nivel y segundo nivel. Muy utilizado en rutas con CRUD</h1>
+<h2 class="color-azul">Añadi clases CSS en carpeta "static" del proyecto, se debe enlazar con etiqueta link, tambien incluyo imagen</h2>
 <h1 th:text="${title}"></h1>
+
+<img th:src="@{/images/biakugan.jpg}"></img>
 
 </body>
 </html>
