@@ -12,6 +12,8 @@
 <ul>
 	<li><a th:href="@{/params/string(texto='valor proporcionado')}">/params/string?texto=Valor de parametro</a></li>
 	<li><a th:href="@{/params/string(texto='Vamos Irving!')}">/params/string?texto=Vamos Irving!</a></li>
+	<li><a th:href="@{/params/mix-params(saludo='Hola Irving', num=26)}">/params/mix-params?saludo=Hola Irving&num=26</a></li>
+	<li><a th:href="@{/params/mix-params-request(saludo='Hola Irving', num=26)}">/params/mix-params-request?saludo=Hola Irving&num=26</a></li>
 </ul>
 
 </body>
