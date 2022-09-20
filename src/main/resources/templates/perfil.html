@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+
+<body>
+<h1>Creo nuevo RequestMapping "perfil" en Controlador "IndexController". Invoco los atributos que recibo desde el controlador</h1>
+<h1 th:text="${usuario}"></h1>
+
+<span th:text="${usuario.name}"></span>
+<span th:text="${usuario.lastName}"></span>
+
+</body>
+</html>
