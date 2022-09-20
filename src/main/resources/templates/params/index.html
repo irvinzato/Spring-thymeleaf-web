@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Parametros</title>
+</head>
+
+<body>
+<h1>Enviar parametros del request http GET - URL</h1>
+<h1>En thymeleaf para las rutas se indica con "@" en lugar de "#" y los parametros entre ()</h1>
+
+<ul>
+	<li><a th:href="@{/params/string(texto='valor proporcionado')}">/params/string?texto=Valor de parametro</a></li>
+	<li><a th:href="@{/params/string(texto='Vamos Irving!')}">/params/string?texto=Vamos Irving!</a></li>
+</ul>
+
+</body>
+</html>
