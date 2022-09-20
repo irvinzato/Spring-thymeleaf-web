@@ -8,7 +8,24 @@
 <body>
 <h1 th:text="${title}"></h1>
 
-<h1 th:if="${listaUsuarios.size() == 0}">No hay usuarios en la lista</h1>
+<h1 th:if="${listaUsuarios.size() == 0}">No hay usuarios en la lista, también pudiera usar isEmpty en lugar de size</h1>
+
+<table th:if="${listaUsuarios.size() > 0}">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="usuario: ${listaUsuarios}">
+			<td th:text="${usuario.name}"></td>
+			<td th:text="${usuario.lastName}"></td>
+			<td th:text="${usuario.email}"></td> 
+		</tr>
+	</tbody>
+</table>
 
 </body>
 </html>

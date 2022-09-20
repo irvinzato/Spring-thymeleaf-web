@@ -1,12 +1,22 @@
 package com.bolsadeideas.springboot.web.app.models;
 
 public class Usuario {
-	
+
 	private String name;
-	
+
 	private String lastName;
-	
+
 	private String email;
+
+	public Usuario() {
+
+	}
+
+	public Usuario(String name, String lastName, String email) {
+		this.name = name;
+		this.lastName = lastName;
+		this.email = email;
+	}
 
 	public String getName() {
 		return name;
@@ -32,7 +42,4 @@ public class Usuario {
 		this.email = email;
 	}
 
-	
-	
-	
 }
