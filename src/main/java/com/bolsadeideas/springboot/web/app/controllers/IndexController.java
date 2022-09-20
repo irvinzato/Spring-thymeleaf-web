@@ -19,6 +19,7 @@ public class IndexController {
 	@GetMapping({"/index", "/", "/home"})	//Puedo omitir "value". Si esta asociado a muchas vistas las pongo entre llaves
 	public String index(Model model) {
 		model.addAttribute("title", "Pase datos a la vista con Model, puedo usar ModelMap, Map, ModelAndView. Otras formas.");
+		
 		return "index";		//Mismo nombre que tiene archivo html en carpeta "template" sin extensión
 	}
 	

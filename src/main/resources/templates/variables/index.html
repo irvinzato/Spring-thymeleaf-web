@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Variables</title>
+</head>
+
+<body>
+<h1>Enviar variables en la ruta(@PathVariable)</h1>
+<h1>En thymeleaf para las rutas se indica con "@" en lugar de "#" y los parametros o variables entre ()</h1>
+
+<ul>
+	<li><a th:href="@{/variables/string/} + 'Hola Irving con variables'">/variables/string/Hola Irving con variables</a></li>
+	<li><a th:href="@{/variables/string/} + ${atributo} + '/' + 26">/variables/string/conAtributo/26</a></li>
+</ul>
+
+</body>
+</html>
