@@ -11,6 +11,10 @@
 
 <span th:text="${usuario.name}"></span>
 <span th:text="${usuario.lastName}"></span>
+<br>
+<span th:if="${usuario.email}" th:text="${usuario.email}"></span> <br>
+<span th:if="${usuario.email == null}" th:text="'El usuario no tiene correo electronico'"></span> <br>
+<span th:if="${usuario.email == null}">Otra opcion de mostrar sin text</span>
 
 </body>
 </html>
