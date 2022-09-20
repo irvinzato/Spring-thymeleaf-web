@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/params")
 public class EjemploParamsController {
 	
+	//Son métodos handle cada uno de ellos
+	
 	@GetMapping("/")
 	public String index() {
 		return "params/index";

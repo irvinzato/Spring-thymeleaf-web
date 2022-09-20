@@ -2,12 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8" />
-	<title>Parametros</title>
+	<title>Variables</title>
 </head>
 
 <body>
-<h1>Recibir parametros del request http GET - URL</h1>
-<h1>Se añade parametro en URL, para este caso - http://localhost:8080/params/string?texto=Hola%20amigo</h1>
+<h1>Recibir parametros de la ruta(@PathVariable)</h1>
 <h1>@PathVariable es muy parecido a @RequestParam. Sirven para lo mismo, enviar datos mediante la URL pero path es mas amigable</h1>
 
 <div th:text="${resultado}"></div>
