@@ -3,6 +3,7 @@ package com.bolsadeideas.springboot.web.app.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +15,20 @@ import com.bolsadeideas.springboot.web.app.models.Usuario;
 @Controller
 @RequestMapping("/app") //Añado ruta de primer nivel "http://localhost:8080/app"
 public class IndexController {
+	
+	//Configuracion en "application.properties", con Value inyecto su valor
+	@Value("${texto.indexcontroller.index.titulo}")
+	private String textIndex;
+	
+	@Value("${texto.indexcontroller.listar.titulo}")
+	private String textList;
+	
 
-	//También puedo utilizar @RequestMapping(value="/index") pero dejo @GetMapping porque es más limpio
+	//También puedo utilizar @RequestMapping(value="/index") pero @GetMapping es más limpio
 	@GetMapping({"/index", "/", "/home"})	//Puedo omitir "value". Si esta asociado a muchas vistas las pongo entre llaves
 	public String index(Model model) {
-		model.addAttribute("title", "Pase datos a la vista con Model, puedo usar ModelMap, Map, ModelAndView. Otras formas.");
+		model.addAttribute("text", "Pase datos a la vista con Model, puedo usar ModelMap, Map, ModelAndView. Otras formas.");
+		model.addAttribute("title", textIndex);
 		
 		return "index";		//Mismo nombre que tiene archivo html en carpeta "template" sin extensión
 	}
@@ -37,7 +47,7 @@ public class IndexController {
 	
 	@RequestMapping("/listar")
 	public String toList(Model model) {
-		model.addAttribute("title", "Lista de usuarios");
+		model.addAttribute("title", textList);
 	
 		return "listar";
 	}
