@@ -16,7 +16,7 @@ import com.bolsadeideas.springboot.web.app.models.Usuario;
 @RequestMapping("/app") //Añado ruta de primer nivel "http://localhost:8080/app"
 public class IndexController {
 	
-	//Configuracion en "application.properties", con Value inyecto su valor
+	//Configuracion en "application.properties", con Value inyecto su valor, pero es mejor configurarlos en otro archivo, creé "textos.properties" con su configuración
 	@Value("${texto.indexcontroller.index.titulo}")
 	private String textIndex;
 	
